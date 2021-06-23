@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Abstraction;
 using InputSystem.UI.Model;
 using InputSystem.UI.View;
 using UnityEngine;
@@ -7,13 +7,20 @@ namespace InputSystem.UI.Presenter
 {
     public class SelectedItemPresenter : MonoBehaviour
     {
+        #region Fields
+
         [SerializeField] private SelectedItemView _view;
         [SerializeField] private SelectedItemModel _model;
+
+        #endregion
+
+
+        #region ClassLiveCycles
 
         private void Start()
         {
             _model.OnUpdate += UpdateView;
-            UpdateView();
+            UpdateView(null);
         }
 
         ~SelectedItemPresenter()
@@ -21,7 +28,9 @@ namespace InputSystem.UI.Presenter
             _model.OnUpdate -= UpdateView;
         }
 
-        private void UpdateView()
+        #endregion
+
+        private void UpdateView(ISelectableItem value)
         {
             if (_model.Value == null)
             {
