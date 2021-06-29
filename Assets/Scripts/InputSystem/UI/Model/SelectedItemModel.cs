@@ -5,7 +5,8 @@ using UnityEngine;
 
 namespace InputSystem.UI.Model
 {
-    [CreateAssetMenu(fileName = nameof(SelectedItemModel), menuName = "Strategy/Models/SelectedItemModel", order = 1)]
+    [CreateAssetMenu(fileName = nameof(SelectedItemModel), menuName = "Strategy/" + nameof(SelectedItemModel),
+        order = 1)]
     public class SelectedItemModel : ScriptableObject
     {
         #region Fields
