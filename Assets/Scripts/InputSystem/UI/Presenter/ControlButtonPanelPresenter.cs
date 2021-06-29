@@ -32,6 +32,10 @@ namespace InputSystem.UI.Presenter
         {
             //ToDo поправить создание комманд
             executor.Execute(_assets.Inject(new ProduceUnitCommand()));
+            executor.Execute(_assets.Inject(new AttackCommand()));
+            executor.Execute(_assets.Inject(new MoveCommand()));
+            executor.Execute(_assets.Inject(new PatrolCommand()));
+            executor.Execute(_assets.Inject(new StopCommand()));
         }
 
         ~ControlButtonPanelPresenter()
