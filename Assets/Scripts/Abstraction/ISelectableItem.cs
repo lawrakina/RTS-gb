@@ -9,6 +9,6 @@ namespace Abstraction
         string Name { get; }
         float Health { get; }
         float MaxHealth { get; }
-        MeshRenderer[] ForMaterials { get; }
+        Renderer[] ForMaterials { get; }
     }
 }

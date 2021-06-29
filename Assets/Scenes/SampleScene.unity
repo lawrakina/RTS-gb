@@ -2655,7 +2655,7 @@ MonoBehaviour:
   _icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   _name: 2221
   _maxHealth: 50
-  _health: 50
+  _health: 41.9
   _forMaterials:
   - {fileID: 0}
 --- !u!1 &1449444262
@@ -3145,6 +3145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _model: {fileID: 11400000, guid: bfd821ab0f4825246a7d0e23293a03b6, type: 2}
   _view: {fileID: 1786533845}
+  _assets: {fileID: 11400000, guid: 143caad3cd16c0245a550fb361fa04bb, type: 2}
 --- !u!114 &1786533845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3207,7 +3208,7 @@ MonoBehaviour:
   _icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   _name: 11112
   _maxHealth: 100
-  _health: 100
+  _health: 48
   _forMaterials:
   - {fileID: 0}
 --- !u!1 &1889142193

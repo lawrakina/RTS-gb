@@ -13,7 +13,7 @@ namespace InputSystem.UI.Model
 
         private ISelectableItem _value;
 
-        public event Action<ISelectableItem> OnUpdate;
+        public Action<ISelectableItem> OnUpdate;
 
         #endregion
 

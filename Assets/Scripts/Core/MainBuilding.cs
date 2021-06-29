@@ -12,7 +12,7 @@ namespace Core
         [SerializeField] private string _name;
         [SerializeField] private float _maxHealth;
         [SerializeField] private float _health;
-        [SerializeField] private MeshRenderer[] _forMaterials;
+        [SerializeField] private Renderer[] _forMaterials;
 
         #endregion
 
@@ -23,7 +23,7 @@ namespace Core
         public string Name => _name;
         public float Health => _health;
         public float MaxHealth => _maxHealth;
-        public MeshRenderer[] ForMaterials => _forMaterials;
+        public Renderer[] ForMaterials => _forMaterials;
 
         #endregion
 
@@ -33,6 +33,10 @@ namespace Core
         private void Awake()
         {
             _forMaterials = gameObject.GetComponentsInChildren<MeshRenderer>();
+            if (_forMaterials.Length < 1)
+            {
+                _forMaterials = GetComponentsInChildren<SkinnedMeshRenderer>();
+            }
         }
 
         #endregion
