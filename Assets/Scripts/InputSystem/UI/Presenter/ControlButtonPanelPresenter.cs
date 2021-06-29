@@ -30,12 +30,25 @@ namespace InputSystem.UI.Presenter
 
         private void ClickHandler(ICommandExecutor executor)
         {
-            //ToDo поправить создание комманд
-            executor.Execute(_assets.Inject(new ProduceUnitCommand()));
-            executor.Execute(_assets.Inject(new AttackCommand()));
-            executor.Execute(_assets.Inject(new MoveCommand()));
-            executor.Execute(_assets.Inject(new PatrolCommand()));
-            executor.Execute(_assets.Inject(new StopCommand()));
+            //ToDo вопрос преподу: вы говорили что можно уйти от свитча, но как это сделать? Дайте мысль...
+            switch (executor)
+            {
+                case CommandExecutorBase<IProduceUnitCommand> productExecutor:
+                    productExecutor.Execute(_assets.Inject(new ProduceUnitCommand()));
+                    break;
+                case CommandExecutorBase<IAttackCommand> attackExecutor:
+                    attackExecutor.Execute(new AttackCommand());
+                    break;
+                case CommandExecutorBase<IPatrolCommand> patrolExecutor:
+                    patrolExecutor.Execute(new PatrolCommand());
+                    break;
+                case CommandExecutorBase<IStopCommand> stopExecutor:
+                    stopExecutor.Execute(new StopCommand());
+                    break;
+                case CommandExecutorBase<IMoveCommand> moveExecutor:
+                    moveExecutor.Execute(new MoveCommand());
+                    break;
+            }
         }
 
         ~ControlButtonPanelPresenter()
