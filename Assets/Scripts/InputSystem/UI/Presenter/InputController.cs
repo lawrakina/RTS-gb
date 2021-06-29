@@ -2,12 +2,20 @@
 using InputSystem.UI.Model;
 using UnityEngine;
 
+
 namespace InputSystem.UI.Presenter
 {
     public class InputController : MonoBehaviour
     {
+        #region Fields
+
         [SerializeField] private Camera _camera;
         [SerializeField] private SelectedItemModel _currentSelected;
+
+        #endregion
+
+
+        #region UnityMethods
 
         private void Update()
         {
@@ -23,5 +31,7 @@ namespace InputSystem.UI.Presenter
                 }
             }
         }
+
+        #endregion
     }
 }

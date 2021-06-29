@@ -5,19 +5,30 @@ using UnityEngine;
 
 namespace InputSystem.UI.Model
 {
-    [CreateAssetMenu(fileName = nameof(SelectedItemModel), menuName = "Strategy/Models/SelectedItemModel", order = 1)]
+    [CreateAssetMenu(fileName = nameof(SelectedItemModel), menuName = "Strategy/" + nameof(SelectedItemModel),
+        order = 1)]
     public class SelectedItemModel : ScriptableObject
     {
+        #region Fields
+
         private ISelectableItem _value;
+
+        public event Action<ISelectableItem> OnUpdate;
+
+        #endregion
+
+
+        #region Properties
+
         public ISelectableItem Value => _value;
+
+        #endregion
 
 
         public void SetValue(ISelectableItem value)
         {
             _value = value;
-            OnUpdate?.Invoke();
+            OnUpdate?.Invoke(_value);
         }
-
-        public event Action OnUpdate;
     }
 }
