@@ -2978,6 +2978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194227}
   _currentSelected: {fileID: 11400000, guid: bfd821ab0f4825246a7d0e23293a03b6, type: 2}
+  _currentGroundClick: {fileID: 11400000, guid: 3cd48a63717e3cb4a9304dc99c7f5f3b, type: 2}
 --- !u!4 &1745773217
 Transform:
   m_ObjectHideFlags: 0
@@ -3720,6 +3721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _assets: {fileID: 11400000, guid: 143caad3cd16c0245a550fb361fa04bb, type: 2}
+  _groundClick: {fileID: 11400000, guid: 3cd48a63717e3cb4a9304dc99c7f5f3b, type: 2}
 --- !u!4 &2104200552
 Transform:
   m_ObjectHideFlags: 0
