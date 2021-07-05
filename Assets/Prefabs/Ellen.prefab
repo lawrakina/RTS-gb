@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8441588620920961973}
   - component: {fileID: 8238137726569565120}
   - component: {fileID: 129567324875777003}
-  - component: {fileID: 4409167492775932719}
+  - component: {fileID: 2122641203429413684}
   m_Layer: 0
   m_Name: Ellen
   m_TagString: Untagged
@@ -81,10 +81,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.6630313
+  m_Radius: 0.21171929
+  m_Height: 1.6719844
   m_Direction: 1
-  m_Center: {x: 0, y: 0.83562815, z: 0}
+  m_Center: {x: 0, y: 0.8359922, z: 0.0074829906}
 --- !u!54 &8397997435038059651
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &8441588620920961973
 MonoBehaviour:
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c94906c3497847378188a01d76036983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4409167492775932719
+--- !u!114 &2122641203429413684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,13 +146,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3016082466948167049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c46800455889434eb5687b30f461883, type: 3}
+  m_Script: {fileID: 11500000, guid: 6eb12dd01e194d7a9e3e5eee987118c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
-  _name: 
-  _maxHealth: 0
-  _health: 0
+  _icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _name: Ellen
+  _maxHealth: 10
+  _health: 10
   _forMaterials: []
 --- !u!1 &3016082466948168193
 GameObject:

@@ -10,8 +10,13 @@ namespace Abstraction
         public GameObject UnitPrefab => _unitPrefab;
     }
 
-    public class MoveCommand : IMoveCommand
+    public class MoveUnitCommand : IMoveCommand
     {
+        public MoveUnitCommand(Vector3 to)
+        {
+            To = to;
+        }
+
         public Vector3 To { get; }
     }
 

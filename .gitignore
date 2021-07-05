@@ -11,6 +11,7 @@
 /[Mm]emoryCaptures/
 /Assets/AssetStoreTools*
 /Assets/ExternalAssets*
+/Assets/Plugins
 /.idea/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
