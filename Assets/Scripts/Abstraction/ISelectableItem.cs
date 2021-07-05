@@ -3,12 +3,10 @@
 
 namespace Abstraction
 {
-    public interface ISelectableItem
+    public interface ISelectableItem : IHealthHolder
     {
         Sprite Icon { get; }
         string Name { get; }
-        float Health { get; }
-        float MaxHealth { get; }
         Renderer[] ForMaterials { get; }
     }
 }

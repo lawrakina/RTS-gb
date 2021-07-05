@@ -5,7 +5,6 @@ namespace Abstraction
 {
     public interface ICommand
     {
-        
     }
 
     public interface IMoveCommand : ICommand
@@ -15,7 +14,7 @@ namespace Abstraction
 
     public interface IAttackCommand : ICommand
     {
-        GameObject Target { get; }
+        public IAttackable Target { get; }
     }
 
     public interface IPatrolCommand : ICommand
@@ -26,7 +25,6 @@ namespace Abstraction
 
     public interface IStopCommand : ICommand
     {
-        
     }
 
     public interface IProduceUnitCommand : ICommand

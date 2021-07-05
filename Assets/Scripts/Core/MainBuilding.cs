@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Core
 {
-    public class MainBuilding : MonoBehaviour, ISelectableItem
+    public class MainBuilding : MonoBehaviour, ISelectableItem, IAttackable
     {
         [SerializeField] private Sprite _icon;
         [SerializeField] private string _name;

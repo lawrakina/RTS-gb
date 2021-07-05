@@ -33,12 +33,54 @@ namespace InputSystem.UI.Model
 
     public class AttackUnitCommandCreator : CommandCreator<IAttackCommand>
     {
+        private SelectedItemModel _selectedItem;
+
+        [Inject]
+        public AttackUnitCommandCreator(SelectedItemModel selectedItem)
+        {
+            _selectedItem = selectedItem;
+        }
+
         protected override void CreateSpecificCommand(Action<IAttackCommand> onCreate)
         {
-            
+            onCreate?.Invoke(new AttackUnitCommand((IAttackable)_selectedItem.Value));
         }
     }
 
+    public class PatrolCommandCreator : CommandCreator<IPatrolCommand>
+    {
+        private SelectedItemModel _selectedItem;
+        private GroundClickModel _groundClick;
+        
+        [Inject]
+        public PatrolCommandCreator(SelectedItemModel selectedItem, GroundClickModel groundClick)
+        {
+            _selectedItem = selectedItem;
+            _groundClick = groundClick;
+        }
+        
+        protected override void CreateSpecificCommand(Action<IPatrolCommand> onAction)
+        {
+            onAction?.Invoke(new PatrolCommand(_groundClick.Value, (_selectedItem.Value as Transform).position));
+        }
+    }
+
+    public class StopCommandCreator : CommandCreator<IStopCommand>
+    {
+        private SelectedItemModel _selectedItem;
+        
+        [Inject]
+        public StopCommandCreator(SelectedItemModel selectedItem)
+        {
+            _selectedItem = selectedItem;
+        }
+        
+        protected override void CreateSpecificCommand(Action<IStopCommand> onAction)
+        {
+            onAction?.Invoke(new StopCommand());
+        }
+    }
+    
     public class MoveUnitCommandCreator : CommandCreator<IMoveCommand>
     {
         private Action<IMoveCommand> _onCreate;
@@ -61,4 +103,5 @@ namespace InputSystem.UI.Model
             _onCreate = onCreate;
         }
     }
+    
 }
