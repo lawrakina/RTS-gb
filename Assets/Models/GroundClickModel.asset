@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35fa938fee564dab9e7e015a0b98c6e0, type: 3}
-  m_Name: AssetsStorage
+  m_Script: {fileID: 11500000, guid: e6677fbcc4064d3990b68c715a769115, type: 3}
+  m_Name: GroundClickModel
   m_EditorClassIdentifier: 
-  _assets:
-  - {fileID: 3016082466948167049, guid: 6fe59a17abdc2724484c9232c16010dd, type: 3}

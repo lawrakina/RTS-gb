@@ -9,20 +9,12 @@ namespace InputSystem.UI.Model
         order = 1)]
     public class SelectedItemModel : ScriptableObject
     {
-        #region Fields
-
         private ISelectableItem _value;
 
-        public event Action<ISelectableItem> OnUpdate;
+        public Action<ISelectableItem> OnUpdate;
 
-        #endregion
-
-
-        #region Properties
 
         public ISelectableItem Value => _value;
-
-        #endregion
 
 
         public void SetValue(ISelectableItem value)

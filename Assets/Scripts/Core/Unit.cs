@@ -1,10 +1,10 @@
-using Abstraction;
+﻿using Abstraction;
 using UnityEngine;
 
 
 namespace Core
 {
-    public class MainBuilding : MonoBehaviour, ISelectableItem
+    public class Unit : MonoBehaviour, ISelectableItem
     {
         [SerializeField] private Sprite _icon;
         [SerializeField] private string _name;
